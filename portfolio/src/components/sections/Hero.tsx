@@ -17,15 +17,15 @@ export const Hero: React.FC = () => {
             className="space-y-6"
           >
             <div className="inline-block px-4 py-2 bg-accent-100 text-accent-700 dark:bg-accent-900 dark:text-accent-300 rounded-full font-medium text-sm">
-              Data Scientist & Startup Founder
+              Data Scientist
             </div>
             
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-black dark:text-white leading-tight">
-              I build tools people <span className="text-accent-500">love</span> to use.
+              I build solution people <span className="text-accent-500">love</span> to use.
             </h1>
             
             <p className="text-lg text-neutral-700 dark:text-neutral-300 max-w-xl">
-              Passionate developer focused on creating high-performance products with exceptional user experiences. I turn complex problems into elegant solutions.
+             Passionate data scientist focused on extracting valuable insights and building intelligent solutions. I turn complex data challenges into actionable, impactful outcomes with precision and creativity.
             </p>
             
             <div className="flex flex-wrap gap-4">
