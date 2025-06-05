@@ -1,21 +1,19 @@
-export interface BlogPost {
-  id: string;
-  title: string;
-  excerpt: string;
-  date: string;
-  tags: string[];
-  url: string;
-}
+// 
+
+
+
+
+
 
 export const blogPosts: BlogPost[] = [
-  {
-    id: 'post-1',
-    title: 'Building a Command Palette with React and CMDK',
-    excerpt: 'Learn how to implement a command palette like Vercel, Linear, and Raycast using React and CMDK.',
-    date: 'May 15, 2024',
-    tags: ['React', 'UI', 'UX'],
-    url: '#'
-  },
+  // {
+  //   id: 'post-1',
+  //   title: 'Building a Command Palette with React and CMDK',
+  //   excerpt: 'Learn how to implement a command palette like Vercel, Linear, and Raycast using React and CMDK.',
+  //   date: 'May 15, 2024',
+  //   tags: ['React', 'UI', 'UX'],
+  //   url: '#'
+  // },
   {
     id: 'post-2',
     title: 'The Future of Web Development: WASM and Edge Computing',
@@ -30,6 +28,14 @@ export const blogPosts: BlogPost[] = [
     excerpt: 'My journey transitioning from software engineer to startup founder and what I learned along the way.',
     date: 'March 22, 2024',
     tags: ['Startup', 'Leadership'],
+    url: '#'
+  },
+  {
+    id: 'post-4',
+    title: 'Real-Time ML in Web Apps: Bridging Frontend and AI',
+    excerpt: 'A deep dive into integrating real-time machine learning in modern web applications using TensorFlow.js and WebGL.',
+    date: 'February 10, 2024',
+    tags: ['AI', 'Data Science', 'ML'],
     url: '#'
   }
 ];

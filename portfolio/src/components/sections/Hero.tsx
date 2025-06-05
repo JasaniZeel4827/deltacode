@@ -69,7 +69,7 @@ export const Hero: React.FC = () => {
                   <code>{`
 function Developer() {
   const [skills, setSkills] = useState([
-    'JavaScript', 'TypeScript',
+    'node js', 'TypeScript',
     'React', 'Node.js', 
     'NextJS', 'TailwindCSS'
   ]);
