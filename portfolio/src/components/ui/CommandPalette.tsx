@@ -18,7 +18,9 @@ export const CommandPalette: React.FC = () => {
 
   const handleSelect = (path: string) => {
     window.location.href = path;
-    closeCommandPalette();
+    closeCommandPalette(
+      
+    );
   };
 
   return (
