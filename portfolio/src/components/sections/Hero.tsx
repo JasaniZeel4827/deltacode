@@ -66,7 +66,9 @@ export const Hero: React.FC = () => {
             <div className="aspect-square max-w-md mx-auto rounded-lg overflow-hidden border-4 border-black dark:border-white bg-accent-500 shadow-brutal dark:shadow-brutal-light">
               <div className="h-full w-full p-6 flex items-center justify-center">
                 <pre className="text-xs md:text-sm overflow-hidden text-white font-mono">
-                  <code>{`
+                  
+                  
+                  {/* <code>{`
 function Developer() {
   const [skills, setSkills] = useState([
     'node js', 'TypeScript',
@@ -90,7 +92,7 @@ function Developer() {
       andCoffee={coffee}
     />
   );
-}`}</code>
+}`}</code> */}
                 </pre>
               </div>
             </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Code, Menu, X } from 'lucide-react';
+import * as LucideIcons from 'lucide-react';
 import { ThemeToggle } from '../ui/ThemeToggle';
 import { navItems } from '../../data/navItems';
 import { useCommandPalette } from '../../context/CommandPaletteContext';
@@ -19,7 +19,7 @@ export const Navbar: React.FC = () => {
               whileHover={{ rotate: [0, -10, 10, -10, 0] }}
               transition={{ duration: 0.5 }}
             >
-              <Code className="h-8 w-8 text-accent-500" />
+              <LucideIcons.Code className="h-8 w-8 text-accent-500" />
             </motion.div>
             <span className="font-bold text-xl">Kunj Jarsaniya</span>
           </a>
@@ -56,7 +56,7 @@ export const Navbar: React.FC = () => {
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="p-2 text-neutral-700 dark:text-neutral-200"
             >
-              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              {isMenuOpen ? <LucideIcons.X size={24} /> : <LucideIcons.Menu size={24} />}
             </button>
           </div>
         </div>

@@ -3,7 +3,7 @@ import { Command } from 'cmdk';
 import { useCommandPalette } from '../../context/CommandPaletteContext';
 import { motion, AnimatePresence } from 'framer-motion';
 import { navItems } from '../../data/navItems';
-import { CommandIcon, Search } from 'lucide-react';
+import * as LucideIcons from 'lucide-react';
 
 export const CommandPalette: React.FC = () => {
   const { isOpen, closeCommandPalette } = useCommandPalette();
@@ -18,9 +18,7 @@ export const CommandPalette: React.FC = () => {
 
   const handleSelect = (path: string) => {
     window.location.href = path;
-    closeCommandPalette(
-      
-    );
+    closeCommandPalette();
   };
 
   return (
@@ -46,7 +44,7 @@ export const CommandPalette: React.FC = () => {
               label="Command Palette"
             >
               <div className="flex items-center px-4 border-b-2 border-neutral-200 dark:border-neutral-dark-700">
-                <Search className="mr-2 h-4 w-4 text-neutral-500 dark:text-neutral-400" />
+                <LucideIcons.Search className="mr-2 h-4 w-4 text-neutral-500 dark:text-neutral-400" />
                 <Command.Input 
                   value={search}
                   onValueChange={setSearch}
@@ -64,16 +62,20 @@ export const CommandPalette: React.FC = () => {
                 </Command.Empty>
                 
                 <Command.Group heading="Navigation">
-                  {navItems.map((item) => (
-                    <Command.Item
-                      key={item.path}
-                      className="flex items-center px-3 py-2 rounded-lg text-neutral-700 dark:text-neutral-200 aria-selected:bg-accent-500 aria-selected:text-white cursor-pointer"
-                      onSelect={() => handleSelect(item.path)}
-                    >
-                      <CommandIcon className="mr-2 h-4 w-4" />
-                      {item.name}
-                    </Command.Item>
-                  ))}
+                  {navItems.map((item) => {
+                    const iconName = item.icon;
+                    const Icon = iconName && iconName in LucideIcons ? (LucideIcons as any)[iconName] as React.FC<any> : null;
+                    return (
+                      <Command.Item
+                        key={item.path}
+                        className="flex items-center px-3 py-2 rounded-lg text-neutral-700 dark:text-neutral-200 aria-selected:bg-accent-500 aria-selected:text-white cursor-pointer"
+                        onSelect={() => handleSelect(item.path)}
+                      >
+                        {Icon && <Icon className="mr-2 h-4 w-4" />}
+                        {item.name}
+                      </Command.Item>
+                    );
+                  })}
                 </Command.Group>
               </Command.List>
             </Command>
